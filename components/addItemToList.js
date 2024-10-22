@@ -1,6 +1,4 @@
-let id = 1;
-
-function addItemToList() {
+function addItemToList(event) {
   const ul = document.querySelector(".todo-list");
   const input = document.querySelector(".todo-field");
 
@@ -9,9 +7,10 @@ function addItemToList() {
   input.style.margin = 0;
 
   ul.style.display = "block";
-  ul.insertAdjacentHTML("beforeend", listItem(id++, input.value));
+  ul.insertAdjacentHTML("beforeend", listItem(incrementID(), input.value));
 
   input.value = "";
+  event.preventDefault();
 }
 
 function listItem(id, content) {
@@ -19,4 +18,16 @@ function listItem(id, content) {
   return li;
 }
 
-export default addItemToList;
+let id = 0;
+
+function incrementID() {
+  id = id + 1;
+  return id;
+}
+
+function decrementID() {
+  id = id - 1;
+  return id;
+}
+
+export { addItemToList, decrementID };

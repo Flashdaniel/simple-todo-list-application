@@ -1,4 +1,8 @@
-import addItemToList from "./components/addItemToList.js";
+import { addItemToList } from "./components/addItemToList.js";
+import deleteListItem from "./components/deleteListItem.js";
 
-const addButton = document.querySelector(".todo-create-btn");
-addButton.addEventListener("click", addItemToList);
+const form = document.querySelector(".todo");
+form.addEventListener("submit", addItemToList);
+
+const todoList = document.querySelector(".todo-list");
+todoList.addEventListener("click", deleteListItem);
