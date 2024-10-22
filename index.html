@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="./index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>TODO LIST</h1>
+    </header>
+    <main>
+      <div class="todo">
+        <input type="text" class="todo-field" />
+
+        <article class="todo-list-container">
+          <ul class="menu">
+            <li class="menu-item"><span>Mark</span></li>
+            <li class="menu-item"><span>Mark as done</span></li>
+            <li class="menu-item"><span>Mark all</span></li>
+            <li class="menu-item"><span>Delete marked</span></li>
+          </ul>
+          <ul class="todo-list">
+            <li class="todo-item">
+              Software Engieenering
+              <span class="icon-delete">🗑</span>
+            </li>
+            <li class="todo-item">
+              Great buinesses investment<span class="icon-delete">🗑</span>
+            </li>
+          </ul>
+        </article>
+
+        <button class="todo-create-btn">
+          Add to list <span class="icon">&plus;</span>
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

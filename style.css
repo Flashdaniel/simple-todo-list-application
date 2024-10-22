@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gainsboro;
+  font-family: Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.todo {
+  display: grid;
+  max-width: 25rem;
+  margin: auto;
+}
+
+.todo-field {
+  font-size: medium;
+  color: #6b6666;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 2px solid chartreuse;
+}
+
+.todo-list-container {
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  display: flex;
+  display: none;
+  flex-direction: column;
+  gap: 0.4rem;
+  list-style: none;
+  background-color: #fff;
+  padding: 0.8rem 1.3rem;
+  z-index: 1;
+}
+
+.menu span {
+  cursor: pointer;
+}
+
+.menu span:hover {
+  color: chartreuse;
+}
+
+.todo-create-btn {
+  font-weight: bold;
+  font-size: medium;
+  background-color: chartreuse;
+  padding-block: 0.7rem;
+  border: 2px solid #fff;
+  border-radius: 8px;
+}
+
+.todo-create-btn:hover {
+  background-color: rgb(119, 238, 1);
+}
+
+.todo-create-btn:active {
+  background-color: rgb(106, 209, 3);
+}
+
+.icon {
+  font-size: larger;
+}
+
+.icon-delete {
+  position: absolute;
+  right: -20px;
+  color: red;
+  font-weight: 700;
+}
+
+.icon-done {
+  margin-inline-end: 0.2rem;
+  color: chartreuse;
+}
+
+.todo-list {
+  list-style-type: decimal;
+  background-color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+}
+
+.todo-item {
+  position: relative;
+  color: #3e3d3d;
+  cursor: pointer;
+}
+
+.todo-item:hover {
+  font-weight: 700;
+}
+
+.todo-item::marker {
+  color: green;
+}
+
+.todo-item + .todo-item {
+  margin-block-start: 0.7rem;
+}
