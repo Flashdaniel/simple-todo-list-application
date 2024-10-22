@@ -21,6 +21,7 @@ h1 {
   font-size: medium;
   color: #6b6666;
   padding: 0.6rem;
+  margin-block-end: 1rem;
   border-radius: 8px;
   border: 2px solid chartreuse;
 }
@@ -83,6 +84,7 @@ h1 {
 }
 
 .todo-list {
+  display: none;
   list-style-type: decimal;
   background-color: #fff;
   padding: 0.8rem 2rem;
