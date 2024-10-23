@@ -2,10 +2,10 @@ import { decrementID } from "./addItemToList.js";
 
 function deleteListItem(event) {
   const list = document.querySelector(".todo-list");
-  const target = event.target.closest("li");
+  const target = event.target.closest(".icon-delete");
 
   if (!target || !list.contains(target)) return;
-  target.remove();
+  target.closest("li").remove();
 
   const numberItems = decrementID();
 
