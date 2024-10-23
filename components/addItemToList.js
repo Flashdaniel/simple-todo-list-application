@@ -1,4 +1,6 @@
 function addItemToList(event) {
+  event.preventDefault();
+
   const ul = document.querySelector(".todo-list");
   const input = document.querySelector(".todo-field");
 
@@ -10,7 +12,6 @@ function addItemToList(event) {
   ul.insertAdjacentHTML("beforeend", listItem(incrementID(), input.value));
 
   input.value = "";
-  event.preventDefault();
 }
 
 function listItem(id, content) {
