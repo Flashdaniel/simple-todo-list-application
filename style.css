@@ -1,4 +1,6 @@
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
 }
 
@@ -31,23 +33,29 @@ h1 {
 }
 
 .menu {
-  position: absolute;
+  position: fixed;
   display: flex;
   display: none;
   flex-direction: column;
   gap: 0.4rem;
   list-style: none;
   background-color: #fff;
-  padding: 0.8rem 1.3rem;
+  padding: 0;
+  border: 1px solid #c3bfbf;
   z-index: 1;
 }
 
-.menu span {
-  cursor: pointer;
+.menu-item {
+  padding: 0.4rem 1.3rem;
 }
 
-.menu span:hover {
-  color: chartreuse;
+.menu-item:hover {
+  background-color: chartreuse;
+  color: #fff;
+}
+
+.menu span {
+  cursor: context-menu;
 }
 
 .todo-create-btn {
@@ -86,11 +94,24 @@ h1 {
 }
 
 .todo-list {
+  position: relative;
   display: none;
   list-style-type: decimal;
   background-color: #fff;
   padding: 0.8rem 2rem;
   border-radius: 8px;
+}
+
+.todo-list:hover::before {
+  position: absolute;
+  content: "right click to open menu";
+  top: -55px;
+  right: -60px;
+  display: block;
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #c3bfbf;
+  color: #6b6666;
 }
 
 .todo-item {
