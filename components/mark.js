@@ -1,10 +1,12 @@
 import { target } from "./menu.js";
 
 function mark(event) {
-  let markAction = event.target;
-  if (markAction.textContent.toLowerCase() != "mark") return;
+  let markAction = event.target.dataset.action;
+  console.log(markAction);
 
-  if (target.children[0].nodeName == "INPUT") return;
+  if (markAction != "mark") return;
+
+  if (target.firstElementChild.nodeName == "INPUT") return;
 
   const todoItems = document.querySelectorAll(".todo-item");
 
@@ -20,7 +22,8 @@ function mark(event) {
     todoItem.insertAdjacentHTML("afterbegin", input);
   }
 
-  markAction.textContent = "Unmark";
+  event.target.dataset.action = "unmark";
+  event.target.textContent = "Unmark";
 }
 
 export default mark;
