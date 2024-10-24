@@ -18,15 +18,21 @@
 
         <article class="todo-list-container">
           <ul class="menu">
-            <li class="menu-item"><button>Mark</button></li>
-            <li class="menu-item"><button>Mark as done</button></li>
-            <li class="menu-item"><button>Mark all</button></li>
-            <li class="menu-item"><button>Delete marked</button></li>
+            <li class="menu-item">
+              <button type="button" data-action="mark">Mark</button>
+            </li>
+            <li class="menu-item">
+              <button type="button">Mark as done</button>
+            </li>
+            <li class="menu-item"><button type="button">Mark all</button></li>
+            <li class="menu-item">
+              <button type="button">Delete marked</button>
+            </li>
           </ul>
           <ul class="todo-list"></ul>
         </article>
 
-        <button class="todo-create-btn">
+        <button type="submit" class="todo-create-btn">
           Add to list <span class="icon">&plus;</span>
         </button>
       </form>
