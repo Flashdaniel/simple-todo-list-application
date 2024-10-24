@@ -45,11 +45,18 @@ h1 {
   z-index: 1;
 }
 
-.menu-item {
+.menu-item button {
+  display: block;
+  text-align: left;
+  width: 100%;
   padding: 0.4rem 1.3rem;
+  border-radius: 0;
+  border: none;
+  background-color: #fff;
+  border-bottom: 1px solid chartreuse;
 }
 
-.menu-item:hover {
+.menu-item button:hover {
   background-color: chartreuse;
   color: #fff;
 }

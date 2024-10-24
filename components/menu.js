@@ -1,7 +1,9 @@
+let target;
+
 function menu(event) {
   event.preventDefault();
 
-  const target = event.target.closest(".todo-item");
+  target = event.target.closest(".todo-item");
   if (!target || !this.contains(target)) return;
 
   const menu = document.querySelector(".menu");
@@ -25,4 +27,4 @@ function menu(event) {
   });
 }
 
-export default menu;
+export { menu, target };

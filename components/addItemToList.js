@@ -15,6 +15,13 @@ function addItemToList(event) {
 }
 
 function listItem(id, content) {
+  const isLi = document.querySelector(".todo-item");
+
+  if (isLi && isLi.firstChild.nodeName == "INPUT") {
+    const li = `<li class="todo-item" id="${id}"><input type="checkbox" name="${id}" >${content}<span class="icon-delete">🗑</span></li>`;
+    return li;
+  }
+
   const li = `<li class="todo-item" id="${id}">${content}<span class="icon-delete">🗑</span></li>`;
   return li;
 }
