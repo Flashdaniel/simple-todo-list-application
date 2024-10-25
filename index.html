@@ -19,14 +19,20 @@
         <article class="todo-list-container">
           <ul class="menu">
             <li class="menu-item">
-              <button type="button" data-action="mark">Mark</button>
+              <button type="button" data-mark="mark">Mark</button>
             </li>
             <li class="menu-item">
-              <button type="button">Mark as done</button>
+              <button type="button" data-mark-as-done="mark-as-done">
+                Mark as done
+              </button>
             </li>
-            <li class="menu-item"><button type="button">Mark all</button></li>
             <li class="menu-item">
-              <button type="button">Delete marked</button>
+              <button type="button" data-mark-all="mark-all">Mark all</button>
+            </li>
+            <li class="menu-item">
+              <button type="button" data-delete-marked="delete-marked">
+                Delete marked
+              </button>
             </li>
           </ul>
           <ul class="todo-list"></ul>

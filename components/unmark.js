@@ -1,6 +1,6 @@
 function unmark(event) {
-  const action = event.target.dataset.action;
-  if (action != "unmark") return;
+  const mark = event.target.dataset.mark;
+  if (mark != "unmark") return;
 
   const lis = document.querySelectorAll(".todo-item");
 
@@ -11,7 +11,7 @@ function unmark(event) {
   // the dom needs time to remove a node before make another change
   setTimeout(() => {
     event.target.innerHTML = "Mark";
-    event.target.dataset.action = "mark";
+    event.target.dataset.mark = "mark";
   }, 0);
 }
 

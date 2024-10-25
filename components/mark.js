@@ -1,8 +1,7 @@
 import { target } from "./menu.js";
 
 function mark(event) {
-  let markAction = event.target.dataset.action;
-  console.log(markAction);
+  let markAction = event.target.dataset.mark;
 
   if (markAction != "mark") return;
 
@@ -22,7 +21,7 @@ function mark(event) {
     todoItem.insertAdjacentHTML("afterbegin", input);
   }
 
-  event.target.dataset.action = "unmark";
+  event.target.dataset.mark = "unmark";
   event.target.textContent = "Unmark";
 }
 
