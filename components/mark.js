@@ -5,7 +5,7 @@ function mark(event) {
 
   if (markAction != "mark") return;
 
-  if (target.firstElementChild.nodeName == "INPUT") return;
+  if (target.children[0].firstElementChild.nodeName == "INPUT") return;
 
   const todoItems = document.querySelectorAll(".todo-item");
 
@@ -18,7 +18,7 @@ function mark(event) {
       input = `<input type="checkbox" name="${todoItem.id}" >`;
     }
 
-    todoItem.insertAdjacentHTML("afterbegin", input);
+    todoItem.firstElementChild.insertAdjacentHTML("afterbegin", input);
   }
 
   event.target.dataset.mark = "unmark";

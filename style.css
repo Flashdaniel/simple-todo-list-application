@@ -40,6 +40,7 @@ h1 {
   gap: 0.4rem;
   list-style: none;
   background-color: #fff;
+  width: 9rem;
   padding: 0;
   border: 1px solid #c3bfbf;
   z-index: 1;
@@ -59,6 +60,7 @@ h1 {
 .menu-item button:hover {
   background-color: chartreuse;
   color: #fff;
+  font-weight: bold;
 }
 
 .menu span {
@@ -92,7 +94,12 @@ h1 {
   top: 50%;
   transform: translateY(-50%);
   color: red;
-  font-weight: 700;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.icon-delete:hover {
+  font-weight: bold;
 }
 
 .icon-done {
@@ -127,6 +134,12 @@ h1 {
   position: relative;
   color: #3e3d3d;
   cursor: pointer;
+}
+
+.todo-item > div {
+  display: flex;
+  align-items: start;
+  gap: 0.1rem;
 }
 
 .todo-item:hover {

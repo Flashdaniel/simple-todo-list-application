@@ -4,15 +4,15 @@ function markAll(event) {
   const markAllAction = event.target.dataset.markAll;
   if (markAllAction != "mark-all") return;
 
-  if (target.firstElementChild.nodeName != "INPUT") {
+  if (target.children[0].firstElementChild.nodeName != "INPUT") {
     const todoItems = document.querySelectorAll(".todo-item");
 
     for (const todoItem of todoItems) {
       let input = `<input type="checkbox" name="${todoItem.id}" checked >`;
-      todoItem.insertAdjacentHTML("afterbegin", input);
+      todoItem.children[0].insertAdjacentHTML("afterbegin", input);
     }
   } else {
-    const inputs = document.querySelectorAll(".todo-item > input");
+    const inputs = document.querySelectorAll(".todo-item input");
 
     for (const input of inputs) {
       input.checked = true;

@@ -17,12 +17,12 @@ function addItemToList(event) {
 function listItem(id, content) {
   const isLi = document.querySelector(".todo-item");
 
-  if (isLi && isLi.firstChild.nodeName == "INPUT") {
-    const li = `<li class="todo-item" id="${id}"><input type="checkbox" name="${id}" >${content}<span class="icon-delete">🗑</span></li>`;
+  if (isLi && isLi.children[0].firstChild.nodeName == "INPUT") {
+    const li = `<li class="todo-item" id="${id}"><div><input type="checkbox" name="${id}" ><span>${content}</span><span class="icon-delete">🗑</span></div></li>`;
     return li;
   }
 
-  const li = `<li class="todo-item" id="${id}">${content}<span class="icon-delete">🗑</span></li>`;
+  const li = `<li class="todo-item" id="${id}"><div><span>${content}</span><span class="icon-delete">🗑</span></div></li>`;
   return li;
 }
 

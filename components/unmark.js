@@ -5,7 +5,8 @@ function unmark(event) {
   const lis = document.querySelectorAll(".todo-item");
 
   for (const li of lis) {
-    if (li.firstElementChild.nodeName == "INPUT") li.firstElementChild.remove();
+    if (li.children[0].firstElementChild.nodeName == "INPUT")
+      li.children[0].firstElementChild.remove();
   }
 
   // the dom needs time to remove a node before make another change
