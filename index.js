@@ -1,5 +1,6 @@
 import { addItemToList } from "./components/addItemToList.js";
 import deleteListItem from "./components/deleteListItem.js";
+import deleteMarked from "./components/deleteMarked.js";
 import mark from "./components/mark.js";
 import markAll from "./components/markAll.js";
 import { menu } from "./components/menu.js";
@@ -14,6 +15,7 @@ mainMenu.addEventListener("click", unmark);
 mainMenu.addEventListener("click", mark);
 mainMenu.addEventListener("click", unmarkAll);
 mainMenu.addEventListener("click", markAll);
+mainMenu.addEventListener("click", deleteMarked);
 
 const todoList = document.querySelector(".todo-list");
 todoList.addEventListener("click", deleteListItem);
