@@ -1,14 +1,14 @@
-import { addItemToList } from "./components/addItemToList.js";
-import deleteListItem from "./components/deleteListItem.js";
-import deleteMarked from "./components/deleteMarked.js";
-import mark from "./components/mark.js";
-import markAll from "./components/markAll.js";
-import markAsDone from "./components/markASDone.js";
-import markNotDone from "./components/markNotDone.js";
-import { menu } from "./components/menu.js";
-import toggleOrder from "./components/toggleOrder.js";
-import unmark from "./components/unmark.js";
-import unmarkAll from "./components/unmarkAll.js";
+import { addItemToList } from "./utilities/addItemToList.js";
+import deleteListItem from "./utilities/deleteListItem.js";
+import deleteMarked from "./utilities/deleteMarked.js";
+import mark from "./utilities/mark.js";
+import markAll from "./utilities/markAll.js";
+import markAsDone from "./utilities/markASDone.js";
+import markNotDone from "./utilities/markNotDone.js";
+import { menu } from "./utilities/menu.js";
+import toggleOrder from "./utilities/toggleOrder.js";
+import unmark from "./utilities/unmark.js";
+import unmarkAll from "./utilities/unmarkAll.js";
 
 const form = document.querySelector(".todo");
 form.addEventListener("submit", addItemToList);
