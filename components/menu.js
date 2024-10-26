@@ -20,6 +20,15 @@ function menu(event) {
     menu.style.left = event.clientX + "px";
   }
 
+  const markAsDone = document.querySelector("button[data-mark-as-done]");
+  if (/✔/.test(target.textContent)) {
+    markAsDone.dataset.markAsDone = "mark-not-done";
+    markAsDone.textContent = "Mark not done";
+  } else {
+    markAsDone.dataset.markAsDone = "mark-as-done";
+    markAsDone.textContent = "Mark as done";
+  }
+
   document.addEventListener("click", (event) => {
     menu.style.display = "";
     menu.style.top = "";
