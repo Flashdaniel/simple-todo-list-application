@@ -10,11 +10,14 @@ function menu(event) {
   menu.style.display = "block";
   const coord = menu.getBoundingClientRect();
 
-  // show menu at the right if no enough space at the left
-  // or show at the left
+  // show menu at the right if no enough space at the left or
+  // at the top if no space at the bottom
   if (event.clientX + coord.width >= document.body.clientWidth) {
     menu.style.top = event.clientY + "px";
     menu.style.left = event.clientX - coord.width + "px";
+  } else if (event.clientY + coord.height >= window.innerHeight) {
+    menu.style.top = event.clientY - coord.height - 20 + "px";
+    menu.style.left = event.clientX + "px";
   } else {
     menu.style.top = event.clientY + "px";
     menu.style.left = event.clientX + "px";
